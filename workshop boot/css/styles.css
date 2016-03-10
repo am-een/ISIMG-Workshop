@@ -1,0 +1,25 @@
+.image-login {
+	text-align: center;
+}
+.image-login img {
+	width: 200px;
+	height: 200px;
+	border : solid 5px #ddd;
+}
+.image-contacte{
+	text-align: center;
+}
+.video {
+	text-align: center;
+}
+.video video {
+	width: 1000px;
+	height: 500px;
+}
+.container div {
+	margin-bottom: 15px;
+}
+.container div img:hover {
+	-webkit-transform: rotateZ(90deg); /* Safari */
+     transform: rotateZ(90deg);
+}

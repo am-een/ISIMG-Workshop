@@ -1,0 +1,22 @@
+<html ng-app>
+
+ <head>
+
+  <title>Filters</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
+
+<body ng-init="contacts=[{nom:'Kadhem Soltani',email:'soltani.kadhem@novavision-it.com'},
+                         {nom:'Amine Ben Aoun',email:'amine.b.aoun@novavision-it.com'}]">
+
+      <input type="text" placeholder="Rechercher..." ng-model="rech">
+
+      <ul>
+        <li ng-repeat="c in contacts | filter:rech">
+          <h4>{{c.nom  | uppercase}}:</h4> {{c.email}}
+        </li>
+      </ul>
+</body>
+
+</html>

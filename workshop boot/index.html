@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!--AngularJS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<!--Angular UI router -->
+	<script src="js/angular-ui-router.min.js"></script>
+
+	<!--App.js-->
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="ISIMGApp">
+<nav class="navbar navbar-default" ng-controller="NavCtrl">
+	<div class="navbar-header">
+	      <a class="navbar-brand" ui-sref="accueil">
+	        <img alt="Brand" src="imgs/bond.png" width="25px" height="25px">
+	      </a>
+    </div>
+
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+        	<li ng-class="{ active: isActive('accueil')}"><a ui-sref="accueil">Acceuil</a></li>
+        	<li ng-class="{ active: isActive('photo')}"><a ui-sref="photo">Photo</a></li>
+        	<li ng-class="{ active: isActive('video')}"><a ui-sref="video">Video</a></li>
+        	<li ng-class="{ active: isActive('contact')}"><a ui-sref="contact">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        	<li ng-class="{ active: isActive('/login')}"><a ui-sref="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Connexion</a></li>
+        </ul>
+	</div>
+</nav>
+
+<div ui-view></div>
+</body>
+</html>
